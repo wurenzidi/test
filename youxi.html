@@ -1,6 +1,6 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
-<title>贪吃蛇Snake</title>
+<title>登录界面</title>
 <script src="https://wurenzidi.github.io/test/jquery/jquery.min.js"></script>	
 <style>
     body{
@@ -224,10 +224,12 @@
 				 document.getElementById('imgx').src='https://wurenzidi.github.io/test/img/'+ parseInt(Math.random()*3+1) +' ('+parseInt(Math.random()*12+1)+').jpg';
 				}	
                 //document.getElementById("un").innerHTML = $("t0").value + " 真棒！ 食物吃光光了！";
-				if(score>3)
+				if(score>99)
+				   document.getElementById("un1").innerHTML = score + " 你最棒！";
+				else if(score>30)
 				   document.getElementById("un1").innerHTML = score + " 你真棒！";
 				else
-				   document.getElementById("un1").innerHTML = score;
+				   document.getElementById("un1").innerHTML = score; 
                 return;
             }
             //window.status = this.toString();
@@ -428,7 +430,7 @@ User password:<br>
 </div>
 
 <div id="d1" style="display:none">
-<p><table id="t4" border="0" cellspacing="0" cellpadding="0"  width="20%" >
+<p><table id="t4" border="0" cellspacing="0" cellpadding="0"  width="25%" >
 <tr><td id = "un"  style="text-align:right;font-size:14;color:blue" >*** js贪吃蛇 ***</td>
 <td id = "un1"  style="text-align:left;font-size:14;color:blue;margin-left:1px" >0</td></tr>
 </table>
@@ -520,14 +522,15 @@ User password:<br>
   }; 
 
   $("st").onclick = function(){
-    if($("t0").value=='焜林'||$("t0").value=='源林'||$("t0").value==666||$("t0").value=='昱林'||$("t0").value==888){               
+    if($("t0").value=='焜林'||$("t0").value=='源林'||$("t0").value==666||$("t0").value=='昱林'||$("t0").value==888){ 
+                document.title = "贪吃蛇Snake";	
 				alert("欢迎 "+$("t0").value+" !");
 				document.getElementById("d0").style.display="none";//隐藏
 				document.getElementById("d1").style.display="";//显示
 				document.getElementById("un").innerHTML = $("t0").value + " 加油哦！得分 ";
             }
-     if($("t0").value=='焜'||$("t0").value=='源'||$("t0").value==666666||$("t0").value=='昱'||$("t0").value==888888){               
-			  window.location.href="https://wurenzidi.github.io/test/saolei.html"; 
+     else if($("t0").value=='焜'||$("t0").value=='源'||$("t0").value==666666||$("t0").value=='昱'||$("t0").value==888888){               
+			  window.location.href="https://wurenzidi.github.io/test/saolei.html";  
             }
 	 else{
 			alert(" 账号错误！！！请重新登录。");
